@@ -1,0 +1,94 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    background: linear-gradient(45deg, #2c3e50, #942a1f);
+    position: relative;
+    cursor: none;
+}
+
+.star {
+    position: absolute;
+    font-size: 10px;
+    color: white;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    animation-duration: .5s;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fall-1 {
+    0% {
+        transform: translate(0, 0);
+        opacity: 1;
+        scale: 0.7;
+    }
+    100% {
+        transform: translate(0, 50px) rotateX(120deg) rotateY(50deg) rotateZ(50deg);
+        opacity: 0;
+        scale: 0.5;
+    }
+}
+@keyframes fall-2 {
+    0% {
+        transform: translate(0, 0) rotateX(240deg) rotateY(20deg) rotateZ(30deg);
+        opacity: 1;
+        scale: 0.5;
+    }
+    100% {
+        transform: translate(0, 100px) rotateX(0deg) rotateY(20deg) rotateZ(30deg);
+        opacity: 0;
+        scale: 0.2;
+    }
+}
+@keyframes fall-3 {
+    0% {
+        transform: translate(0, 0);
+        opacity: 1;
+        scale: 0.2;
+    }
+    100% {
+        transform: translate(0, 150px) rotateX(360deg) rotateY(10deg) rotateZ(90deg);
+        opacity: 0;
+        scale: 0.1;
+    }
+}
+
+
+/* .glow {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    height: 1px;
+    width: 1px;
+    border-radius: 50%;
+    background: radial-gradient(pink, rgba(255, 192, 203, 0.632));
+    box-shadow: 0 0 1rem 0.5rem pink;
+} 
+*/
+
+.coursor {
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    left: 50%;
+    top: 50%;
+    transform: translate(20%, 50%);
+    scale: 0;
+}
+
+body:hover .coursor {
+    scale: 1;
+}
